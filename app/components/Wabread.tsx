@@ -10,10 +10,10 @@ import { Material, Mesh, MeshStandardMaterial } from "three";
 export function Wabread(props: any) {
   const { nodes, materials } = useGLTF("/models/wabread.gltf") as unknown as {
     nodes: {
-      [key: string]: Mesh;
+      [key: string]: any; // Use `any` if you are unsure of the exact type
     };
     materials: {
-      [key: string]: Material;
+      [key: string]: any; // Use `any` if you are unsure of the exact type
     };
   };
 
@@ -994,4 +994,4 @@ export function Wabread(props: any) {
   );
 }
 
-useGLTF.preload("./models/wabread.gltf");
+useGLTF.preload("/models/wabread.gltf");
